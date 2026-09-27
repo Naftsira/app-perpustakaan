@@ -5,6 +5,9 @@
     <title>@yield('title', 'Perpustakaan Digital Kampus')</title>
     <style>
         * { box-sizing: border-box; }
+        label { display: block; margin-top: 12px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; box-sizing: border-box; }
+        .error { color: #b91c1c; font-size: 14px; margin-top: 4px; }
         body { font-family: sans-serif; margin: 0; color: #1f2937; }
         nav { background: #000000; border-bottom: 7px solid #FFCC00; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
         nav .brand { color: #FFCC00; font-weight: bold; font-size: 18px; }
@@ -17,7 +20,7 @@
         table { border-collapse: collapse; width: 100%; margin-top: 16px; }
         th, td { border: 1px solid #ccc; padding: 10px 12px;}
         .alert-success { background: #d1fae5; color: #065f46; padding: 10px 14px; border-radius: 4px; margin-bottom: 16px; }
-        .btn { display: inline-block; font-weight:bold; padding: 10px 14px; background: #FFCC00; color: #000000; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; }
+        .btn { display: inline-block; font-weight:bold; padding: 10px 14px; background: #FFCC00; color: #000000; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; margin-top:10px; }
         form.inline { display: inline; }
         footer { text-align: center; padding: 20px; color: #6b7280; font-size: 14px; border-top: 1px solid #e5e7eb; margin-top: 40px; }
     </style>

@@ -14,6 +14,7 @@
                 <th>Email</th>
                 <th>No. Telepon</th>
                 <th>Status</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
                     <td>{{ $member['email'] }}</td>
                     <td>{{ $member['nomor_telepon'] }}</td>
                     <td>{{ ucfirst($member['status']) }}</td>
+                    <td><a href="{{ route('members.show', $member['id']) }}">Detail</a></td>
                 </tr>
             @empty
                 <tr>
@@ -33,6 +35,8 @@
             @endforelse
         </tbody>
     </table>
+    <h1>Tambah Anggota</h1>
+    <p><a href="{{ route('members.create') }}" class="btn">+ Tambah Anggota</a></p>
 
     <p><em>Catatan: data di atas masih data dummy (array statis di Controller). Form tambah/edit anggota dan CRUD lengkap anggota baru dibuat mulai Pertemuan 5.</em></p>
 @endsection

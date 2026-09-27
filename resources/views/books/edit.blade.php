@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Buku</title>
-    <style>
-        body { font-family: sans-serif; margin: 40px; max-width: 500px; }
-        label { display: block; margin-top: 12px; font-weight: bold; }
-        input, select { width: 100%; padding: 6px; margin-top: 4px; box-sizing: border-box; }
-        .error { color: #b91c1c; font-size: 14px; margin-top: 4px; }
-        .btn { margin-top: 20px; padding: 8px 16px; font-weight: bold; background: #FFCC00; color: #000000; border: none; border-radius: 4px; cursor: pointer; }
-    </style>
-</head>
-<body>
-    <h1>Edit Buku</h1>
+@extends('layouts.app')
+
+@section('title', 'Edit Buku '. $book['judul'])
+
+@section('content')
+    <h1>Edit Buku {{$book['judul']}}</h1>
     <p><a href="{{ route('books.index') }}">&larr; Kembali ke daftar buku</a></p>
 
     <form action="{{ route('books.update', $book['id']) }}" method="POST">
@@ -70,5 +61,4 @@
 
         <button type="submit" class="btn">Perbarui</button>
     </form>
-</body>
-</html>
+@endsection

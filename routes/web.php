@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoanController;
@@ -11,6 +12,8 @@ Route::get('/', function () {
 });
 
 
+Route::get('/admins/info', [AdminController::class, 'info'])->name('admins.info');
+Route::resource('admins', AdminController::class);
 Route::resource('books', BookController::class);
 Route::resource('categories', CategoryController::class)->except(['show']);
 Route::resource('members', MemberController::class);

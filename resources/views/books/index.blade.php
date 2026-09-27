@@ -8,7 +8,7 @@
         table { border-collapse: collapse; width: 100%; margin-top: 16px; }
         th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; }
         .success { background: #d1fae5; color: #065f46; padding: 10px 14px; border-radius: 4px; margin-top: 16px; }
-        .btn { display: inline-block; padding: 6px 14px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 4px; }
+        .btn { display: inline-block; font-weight:bold; padding: 6px 14px; background: #FFCC00; color: #000000; text-decoration: none; border-radius: 4px; }
         form.inline { display: inline; }
     </style>
 </head>

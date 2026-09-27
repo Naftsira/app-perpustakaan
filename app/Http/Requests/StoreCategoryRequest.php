@@ -32,7 +32,6 @@ class StoreCategoryRequest extends FormRequest
         return [
             'nama_category.required'=> 'Nama kategori adlah required.',
             'nama_category.max'=> 'Batas Maks adalah 100 char.'
-
-        ]
+        ];
     }
 }

@@ -36,7 +36,6 @@ class BookController extends Controller
      */
     public function store(StoreBookRequest $request)
     {
-        dd('Masuk Controller');
         $validated = $request->validated();
         return redirect()->route('books.index')->with('success', "Buku \"{$validated['judul']}\" berhasil ditambahkan (data dummy, belum tersimpan ke database).");
     }

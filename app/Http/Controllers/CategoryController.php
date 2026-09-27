@@ -29,18 +29,28 @@ class CategoryController extends Controller
     {
         $validated = $request->validated();
 
-        return redirect()->route('categories.index')
-            ->with('success', "Kategori \"{$validated['nama_kategori']}\" berhasil ditambahkan (data dummy, belum tersimpan ke database).");
+        return redirect()->route('categories.index')->with('success', "Kategori \"{$validated['nama_category']}\" berhasil ditambahkan (data dummy, belum tersimpan ke database).");
     }
 
     public function edit(string $id)
     {
-        return "CategoryController@edit, id: {$id}";
-    }
+            $category = collect($this->categories)->firstWhere('id', (int) $id);
+
+            abort_if(! $category, 404);
+
+            $categories = $this->categories;
+
+            return view('categories.edit', compact('category', 'categories'));
+        }
 
     public function update(Request $request, string $id)
     {
-        return "CategoryController@update, id: {$id}";
+        $validated = $request->validate([
+            'nama_category'=> 'required|string|max:100',
+            'deskripsi'=> 'nullable|string'
+        ]);
+
+        return redirect()->route('categories.index')->with('success', "Kategori \"{$validated['nama_category']}\" berhasil diperbarui (data dummy, belum tersimpan ke database).");
     }
 
     public function destroy(string $id)

@@ -9,9 +9,9 @@
     <form action="{{ route('categories.store') }}" method="POST">
         @csrf
 
-        <label for="nama_category">Nama Kategori</label>
-        <input type="text" name="nama_category" id="nama_category" value="{{ old('nama_category') }}">
-        @error('nama_category')
+        <label for="nama_kategori">Nama Kategori</label>
+        <input type="text" name="nama_kategori" id="nama_kategori" value="{{ old('nama_kategori') }}">
+        @error('nama_kategori')
             <div class="error">{{ $message }}</div>
         @enderror
 

@@ -20,7 +20,7 @@
             @forelse ($categories as $category)
                 <tr>
                     <td>{{ $category['id'] }}</td>
-                    <td>{{ $category['nama_category'] }}</td>
+                    <td>{{ $category['nama_kategori'] }}</td>
                     <td>{{ $category['deskripsi'] ?? '-' }}</td>
                     <td>
                         <a href="{{ route('categories.edit', $category['id']) }}">Edit</a>
@@ -40,5 +40,5 @@
         </tbody>
     </table>
 
-    <p><em>Catatan: data di atas masih data dummy (array statis di Controller), belum dari database. Migration &amp; Model Eloquent baru dibuat di Pertemuan 5.</em></p>
+    <p><em>{{ $categories->links() }}</em></p>
 @endsection

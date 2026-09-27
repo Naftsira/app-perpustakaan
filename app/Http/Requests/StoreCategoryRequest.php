@@ -23,15 +23,15 @@ class StoreCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nama_category'=> 'required|string|max:100',
+            'nama_kategori'=> 'required|string|max:100',
             'deskripsi'=> 'nullable|string'
         ];
     }
     public function messages(): array
     {
         return [
-            'nama_category.required'=> 'Nama kategori adlah required.',
-            'nama_category.max'=> 'Batas Maks adalah 100 char.'
+            'nama_kategori.required'=> 'Nama kategori adlah required.',
+            'nama_kategori.max'=> 'Batas Maks adalah 100 char.'
         ];
     }
 }

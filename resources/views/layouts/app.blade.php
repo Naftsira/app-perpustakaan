@@ -9,7 +9,7 @@
         input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; box-sizing: border-box; }
         .error { color: #b91c1c; font-size: 14px; margin-top: 4px; }
         body { font-family: sans-serif; margin: 0; color: #1f2937; }
-        nav { background: #000000; border-bottom: 7px solid #FFCC00; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        nav { background: #000000; border-bottom: 7px solid #FFCC00; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; position: sticky; width: 100%; top:0; left:0;}
         nav .brand { color: #FFCC00; font-weight: bold; font-size: 18px; }
         nav img{width:4padding; height: 4rem; border: 2px #FFCC00 dashed; border-radius:50%; padding:7px; object-fit:contain;}
         nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }

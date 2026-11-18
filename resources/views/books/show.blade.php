@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <th>ID Kategori</th>
-            <td>{{ $book['category_id'] }}</td>
+            <td>{{ $book['category']['nama_kategori'] }}</td>
         </tr>
     </table>
 @endsection

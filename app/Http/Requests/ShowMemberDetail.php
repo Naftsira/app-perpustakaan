@@ -9,6 +9,12 @@ class ShowMemberDetail extends FormRequest
 {
     public function authorize(): bool
     {
-        return (int) $this->route('member') === 1;
+        $memberId = (int) $this->route('member');
+
+        if ($memberId == 3) {
+            abort(403, "Testing authorization: View Member ID=={$memberId} sengaja tidak diizinkan.");
+        }
+
+        return true;
     }
 }

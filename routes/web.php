@@ -18,4 +18,4 @@ Route::resource('books', BookController::class);
 Route::resource('categories', CategoryController::class)->except(['show']);
 Route::resource('members', MemberController::class);
 Route::resource('loans', LoanController::class);
-Route::put('/loans/{id}/kembalikan', [LoanController::class, 'kembalikan'])->name('loans.kembalikan');
+Route::patch('/loans/{id}/kembalikan', [LoanController::class, 'kembalikan'])->name('loans.kembalikan');

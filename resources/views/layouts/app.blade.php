@@ -20,6 +20,28 @@
         table { border-collapse: collapse; width: 100%; margin-top: 16px; }
         th, td { border: 1px solid #ccc; padding: 10px 12px;}
         .alert-success { background: #d1fae5; color: #065f46; padding: 10px 14px; border-radius: 4px; margin-bottom: 16px; }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .status-dikembalikan {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .status-dipinjam {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-terlambat {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
         .btn { display: inline-block; font-weight:bold; padding: 10px 14px; background: #FFCC00; color: #000000; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; margin-top:10px; }
         form.inline { display: inline; }
         footer { text-align: center; padding: 20px; color: #6b7280; font-size: 14px; border-top: 1px solid #e5e7eb; margin-top: 40px; }
